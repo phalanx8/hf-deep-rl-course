@@ -1,0 +1,10 @@
+pyglet==1.5
+pyvirtualdisplay
+gym==0.21
+imageio-ffmpeg
+imageio
+huggingface_hub
+box2d
+tensorflow
+torch
+wandb
