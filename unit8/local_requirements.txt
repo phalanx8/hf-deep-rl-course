@@ -8,3 +8,4 @@ box2d
 tensorflow
 torch
 wandb
+wasabi
