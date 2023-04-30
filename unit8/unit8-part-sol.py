@@ -1,5 +1,5 @@
 # docs and experiment results can be found at https://docs.cleanrl.dev/rl-algorithms/ppo/#ppopy
-
+from pyvirtualdisplay import Display
 import argparse
 import os
 import random
@@ -26,6 +26,8 @@ import imageio
 
 from wasabi import Printer
 msg = Printer()
+virtual_display = Display(visible=0, size=(1400, 900))
+virtual_display.start()
 
 
 def parse_args():

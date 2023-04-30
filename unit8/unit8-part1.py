@@ -33,9 +33,6 @@ msg = Printer()
 virtual_display = Display(visible=0, size=(1400, 900))
 virtual_display.start()
 
-parser.add_argument("--repo-id", type=str, default="mojemai/ppo-CartPole-v1",
-                    help="id of the model repository from the Hugging Face Hub {username/repo_name}")
-
 
 def parse_args():
     # fmt: off
@@ -352,7 +349,6 @@ class Agent(nn.Module):
             action = probs.sample()
         return action, probs.log_prob(action), probs.entropy(), self.critic(x)
 
-
     def forward(self, x):
         return x
 
@@ -421,7 +417,7 @@ if __name__ == "__main__":
     num_updates = args.total_timesteps // args.batch_size
 
     for update in range(1, num_updates + 1):
-    # Annealing the rate if instructed to do so.
+        # Annealing the rate if instructed to do so.
         if args.anneal_lr:
             frac = 1.0 - (update - 1.0) / num_updates
             lrnow = frac * args.learning_rate
@@ -476,9 +472,9 @@ if __name__ == "__main__":
                         nextnonterminal = 1.0 - dones[t + 1]
                         next_return = returns[t + 1]
                     returns[t] = rewards[t] + args.gamma * nextnonterminal * next_return
-                advantages = returns - values 
+                advantages = returns - values
 
-                    # flatten the batch
+                # flatten the batch
         b_obs = obs.reshape((-1,) + envs.single_observation_space.shape)
         b_logprobs = logprobs.reshape(-1)
         b_actions = actions.reshape((-1,) + envs.single_action_space.shape)
