@@ -55,7 +55,7 @@ if __name__ == "__main__":
     # other scenarios include "doom_basic", "doom_two_colors_easy", "doom_dm", "doom_dwango5", "doom_my_way_home", "doom_deadly_corridor", "doom_defend_the_center", "doom_defend_the_line"
     env = "doom_health_gathering_supreme"
     cfg = parse_vizdoom_cfg(argv=[f"--env={env}", "--num_workers=8",
-                            "--num_envs_per_worker=4", "--train_for_env_steps=4000000"])
+                            "--num_envs_per_worker=4", "--train_for_env_steps=10000000"])
 
     status = run_rl(cfg)
     cfg = parse_vizdoom_cfg(argv=[f"--env={env}", "--num_workers=1", "--save_video",
