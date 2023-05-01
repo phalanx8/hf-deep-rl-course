@@ -41,4 +41,8 @@ if __name__ == "__main__":
 
     model_architecture = "PPO"
     eval_env = DummyVecEnv([lambda: gym.make(env_id)])
-    package_to_hub(model=model, model_id=model_name, model_type=model_architecture, env=eval_env, training_env=env)
+    package_to_hub(model=model,
+                   model_id=model_name,
+                   model_architecture=model_architecture,
+                   env=eval_env,
+                   training_env=env)
