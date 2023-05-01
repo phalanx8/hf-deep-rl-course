@@ -62,7 +62,7 @@ if __name__ == "__main__":
                             "--no_render", "--max_num_episodes=10"], evaluation=True)
     status = enjoy(cfg)
 
-    mp4 = open('_vizdoom/train_dir/default_experiment/replay.mp4', 'rb').read()
+    mp4 = open('train_dir/default_experiment/replay.mp4', 'rb').read()
     data_url = "data:video/mp4;base64," + b64encode(mp4).decode()
     HTML("""
     <video width=640 controls>
