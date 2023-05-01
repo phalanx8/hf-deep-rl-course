@@ -10,7 +10,7 @@ from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.vec_env import DummyVecEnv
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     virtual_display = Display(visible=0, size=(1400, 900))
     virtual_display.start()
     login()
