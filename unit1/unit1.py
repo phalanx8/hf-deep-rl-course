@@ -30,7 +30,7 @@ if __name__ == "__main__":
         verbose=1)
 
     # Train it for 1,000,000 timesteps
-    model.learn(total_timesteps=100000000)
+    model.learn(total_timesteps=1000000)
     # Save the model
     model_name = "mlp-ppo-gym-LunarLander-v2"
     model.save(model_name)
