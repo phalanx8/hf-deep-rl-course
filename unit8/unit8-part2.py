@@ -11,7 +11,7 @@ from sf_examples.vizdoom.doom.doom_utils import DOOM_ENVS, make_doom_env_from_sp
 from sample_factory.enjoy import enjoy
 from base64 import b64encode
 from IPython.display import HTML
-from huggingface_hub import notebook_login
+from huggingface_hub import login
 
 # Registers all the ViZDoom environments
 
